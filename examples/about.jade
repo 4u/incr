@@ -1,0 +1,36 @@
+:provide
+  my.Template
+
+.about
+  .about-inner
+    h2.about-title О нас в трех предложениях
+    a.about-more(href="/")
+      img.about-more-icon(src=require('./i.svg'))
+      | Подробнее на
+      = ' '
+      strong awa.finance
+
+    .about-items
+      .about-item
+        a.about-item-icon(href='/')
+          img.about-item-img(src=require('./site.svg'))
+        .about-item-text Тут надо написать про AWA и дать ссылку на
+          = ' '
+          a(href='/') основной сайт
+
+      .about-item
+        a.about-item-icon(href='/')
+          img.about-item-img(src=require('./currency.svg'))
+        .about-item-text Мы можем предложить низкий курс доллара за счет бронирования его в
+          = ' '
+          a(href='/') банках-партнерах
+
+      .about-item
+        a.about-item-icon(href='/')
+          img.about-item-thumb(src=require('./shield.svg'))
+          img.about-item-img(src=require('./telegram.svg'))
+        .about-item-text Используем
+          = ' '
+          a(href='/') Telegram
+          = ' '
+          | как самое практичное и безопасное средство связи

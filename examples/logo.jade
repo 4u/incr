@@ -1,0 +1,9 @@
+:provide
+  app.Logo
+
+:require
+  app.string
+
+.logo
+  img.logo-img(src='./logo.svg', key="lol")
+  = app.string.uppercase('Logo')
