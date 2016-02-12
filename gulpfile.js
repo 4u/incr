@@ -11,7 +11,7 @@ gulp.task('default', function() {
   ]);
 
   return gulp.src('examples/**/*.jade')
-    .pipe(incr.vinylTransform)
+    .pipe(incr.vinylTransform())
     .pipe(rename({ extname: '.jade.js' }))
     .pipe(gulp.dest('build/'));
 });
