@@ -4,8 +4,9 @@
 .about(class="a")
   .about-inner
     h2.about-title(dynamic) О нас в трех предложениях
-    a.about-more(href="/", dynamic={'id': 'about'})
-      img.about-more-icon(src=require('./i.svg'))
+    a.about-more(href="/")&attributes({'id': 'about'})
+      - var rnd = Math.random();
+      img.about-more-icon(src=require('./i.svg'))&attributes({'id': 'img' + rnd})
       | Подробнее на
       = ' '
       strong awa.finance
