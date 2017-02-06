@@ -17,8 +17,11 @@ mixin article(title)
         p No content provided
 
 mixin link(href, name)
-  //- attributes == {class: "btn"}
+  - attributes = {class: "btn"}
   a(class!=attributes.class href=href)= name
+
+mixin blockTest()
+  +simple
 
 .mixin
   +simple
@@ -31,3 +34,5 @@ mixin link(href, name)
     +simple
 
   +link('/foo', 'foo')(class="btn")
+
+  +blockTest
