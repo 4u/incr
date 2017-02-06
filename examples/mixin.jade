@@ -1,0 +1,33 @@
+:provide
+  app.Mixin
+
+:require
+  app.utils
+
+mixin simple
+  .simple test
+
+mixin article(title)
+  .article
+    .article-wrapper
+      h1= title
+      if block
+        block
+      else
+        p No content provided
+
+mixin link(href, name)
+  //- attributes == {class: "btn"}
+  a(class!=attributes.class href=href)= name
+
+.mixin
+  +simple
+
+  +article('Hello world')
+
+  +article('Hello world')
+    p This is my
+    p Amazing article
+    +simple
+
+  +link('/foo', 'foo')(class="btn")
